@@ -1,0 +1,32 @@
+<!doctype html>
+<body>
+<header> <h2> Word List </h2> </header>
+<input id="input" type="text"> </input>
+<button id="submit"> submit </button>
+
+<ul id="myUL">
+  
+</ul>
+ 
+</body>
+<script> 
+let text = document.querySelector('input'); 
+let submit = document.querySelector('button'); 
+
+submit.addEventListener("click", () => {
+  let li = document.createElement("li");
+  let inputValue = document.getElementById("input").value;
+  let word = document.createTextNode(inputValue);
+  li.appendChild(word);
+   if (inputValue === '') {
+    alert("Please enter a word.");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+});
+  
+</script>
+
+</html>
+
+</html>
